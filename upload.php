@@ -1,8 +1,11 @@
 <?php
+$client_id = '';
+$client_secret = '';
+$refresh_token = '';
 
 $url = 'https://oauth2.googleapis.com/token';
 $headers = array('Content-Type: application/x-www-form-urlencoded');
-$postdata = 'client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&grant_type=refresh_token&refresh_token=YOUR_REFRESH_TOKEN';
+$postdata = 'client_id=' + $client_id + '&client_secret=' + $client_secret + '&grant_type=refresh_token&refresh_token=' + $refresh_token;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
